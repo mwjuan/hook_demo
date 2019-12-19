@@ -11,4 +11,4 @@ React Hooks 的意思是，组件尽量写成纯函数，如果需要外部功�
 4、useEffect()：副作用钩子useEffect()用来引入具有副作用的操作，最常见的就是向服务器请求数据。以前，放在componentDidMount里面的代码，现在可以放在useEffect()。useEffect()的用法如下。useEffect(() => {// Async Action}, [dependencies])上面用法中，useEffect()接受两个参数。第一个参数是一个函数，异步操作的代码放在里面。第二个参数是一个数组，用于给出 Effect 的依赖项，只要这个数组发生变化，useEffect()就会执行。第二个参数可以省略，这时每次组件渲染时，就会执行useEffect()。
 
 
-useMemomemo类似于PureCompoent 作用是优化组件性能，防止组件触发重渲染memo针对 一个组件的渲染是否重复执行<Foo />usememo针对 一段函数逻辑是否重复执行()=>{}useEffect是在渲染之后完成的useMemo是在渲染期间完成的useMemo(()=>{},[])参数如果是空数组的话就只会执行一次useCallbackuseMemo( ()=>{fn} ) 等价于 useCallback(fn)、
+useMemomemo类似于PureCompoent 作用是优化组件性能，防止组件触发重渲染memo针对 一个组件的渲染是否重复执行<Foo />usememo针对 一段函数逻辑是否重复执行()=>{}useEffect是在渲染之后完成的useMemo是在渲染期间完成的useMemo(()=>{},[])参数如果是空数组的话就只会执行一次useCallbackuseMemo( ()=>{fn} ) 等价于 useCallback(fn)
